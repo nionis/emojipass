@@ -2,7 +2,7 @@ FROM mhart/alpine-node:10
 WORKDIR /usr/src
 
 COPY package.json ./
-RUN npm
+RUN npm install
 
 COPY . .
-RUN npm build && mv build /public
+RUN npm run build && mv build /public
